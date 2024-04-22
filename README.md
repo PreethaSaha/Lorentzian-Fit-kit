@@ -14,12 +14,15 @@ The Lorentzian curve is a common model used in numerous scientific domains to ch
 To use this code, follow these steps:
 
 1. Clone the repository
+
    git clone https://github.com/PreethaSaha/Lorentzian-Fit-kit.git
 
-2. Navigate to the project directory
+3. Navigate to the project directory
+
    cd Lorentzian-Fit-kit
 
-3. Install the required dependencies
+5. Install the required dependencies
+
    pip install -r requirements.txt
 
 ## Usage:
