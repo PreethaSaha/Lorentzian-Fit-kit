@@ -7,9 +7,9 @@ The Lorentzian curve is a common model used in numerous scientific domains to ch
 
 The Lorentzian function $L(x)$ is defined as
 
-$L(x)=\frac{1}{\pi}*\frac{\gamma/2}{(x-x_0)^2+(\gamma/2)^2}$
+$L(x) = k*\frac{(\Gamma/2)^2}{(x-x_0)^2+(\Gamma/2)^2}$
 
-where $x_0$ is the center and $\Gamma$ is the full-width at half-maxima (FWHM).
+where $k$ is the amplitude, $x_0$ is the center and $\Gamma$ is the full-width at half-maxima (FWHM).
 
  
 
@@ -37,13 +37,13 @@ Currently the types of baseline include and the respective codes are linked belo
 
 ## Input Data Format:
 
-The input data should contain two columns: one for the independent variable X (e.g., wavelength, frequency) and another for the corresponding dependent variable Y (e.g., intensity, amplitude). 
+The input data should contain two columns of equal length: one for the independent variable X (e.g., wavelength, frequency) and another for the corresponding dependent variable Y (e.g., intensity, amplitude). 
 
-Note that the code assumes input data consisting of a minimum 20 (X,Y) datapoints.
+Note that the code assumes an input data consisting of a minimum 20 (X,Y) datapoints.
 
 ## Output:
 
-The script generates a plot showing the original data points along with the fitted Lorentzian curve and the selected baseline, in an output file name 'test.png'. Additionally, it prints the parameters of the fitted Lorentzian curve.
+The script prints the parameters of the fitted Lorentzian curve: $k$, $x_0$, $\Gamma$ and the respective parameters of the fitted baseline. Optionally, it generates a plot showing the original data points along with the fitted Lorentzian curve and the selected baseline, in an user-defined path and an output file name 'test.png'.
 
 ## License:
 
