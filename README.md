@@ -18,13 +18,13 @@ To use this code, follow these steps:
 
 1. Clone the repository
 
- <div>
-  <button class="copy-button" onclick="copyToClipboard(this.parentElement.nextElementSibling.textContent)">Copy</button>
+<div>
+  <button class="copy-button" onclick="copyToClipboard(this.parentElement.nextElementSibling.textContent)"></button>
   <pre><code>git clone https://github.com/PreethaSaha/Lorentzian-Fit-kit.git
   </code></pre>
 </div>
-git clone https://github.com/PreethaSaha/Lorentzian-Fit-kit.git
-3. Navigate to the project directory
+
+2. Navigate to the project directory
 
    cd Lorentzian-Fit-kit
 
