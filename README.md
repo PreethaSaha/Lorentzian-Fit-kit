@@ -18,7 +18,12 @@ To use this code, follow these steps:
 
 1. Clone the repository
 
-   ```git clone https://github.com/PreethaSaha/Lorentzian-Fit-kit.git```
+ <div>
+  <button class="copy-button" onclick="copyToClipboard(this.parentElement.nextElementSibling.textContent)">Copy</button>
+  <pre><code>This is a black box display for text in a README.md file.
+  You can use it to highlight important information or commands.
+  <`git clone https://github.com/PreethaSaha/Lorentzian-Fit-kit.git`></pre>
+</div>
 
 3. Navigate to the project directory
 
