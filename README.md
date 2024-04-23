@@ -26,11 +26,21 @@ To use this code, follow these steps:
 
 2. Navigate to the project directory
 
-   cd Lorentzian-Fit-kit
+<div>
+  <button class="copy-button" onclick="copyToClipboard(this.parentElement.nextElementSibling.textContent)"></button>
+  <pre><code>cd Lorentzian-Fit-kit
+  </code></pre>
+</div>
+   
 
-5. Install the required dependencies
+3. Install the required dependencies
 
-   pip install -r requirements.txt
+<div>
+  <button class="copy-button" onclick="copyToClipboard(this.parentElement.nextElementSibling.textContent)"></button>
+  <pre><code> pip install -r requirements.txt
+  </code></pre>
+</div>
+  
 
 ## Usage:
 
