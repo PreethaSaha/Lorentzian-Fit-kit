@@ -32,8 +32,8 @@ To use this code, follow these steps:
 
 Currently the types of baseline include and the respective codes are linked below:
 
-1. [Constant](https://github.com/PreethaSaha/Lorentzian-Fit-kit/blob/main/LorentzFit.py) 
-2. [Cubic](https://github.com/PreethaSaha/Lorentzian-Fit-kit/blob/main/LorentzFit_cubic.py)
+1. [Constant: LorentzFit.py](https://github.com/PreethaSaha/Lorentzian-Fit-kit/blob/main/LorentzFit.py) 
+2. [Cubic: LorentzFit_cubic.py](https://github.com/PreethaSaha/Lorentzian-Fit-kit/blob/main/LorentzFit_cubic.py)
 
 The above codes are designed to find a true Loretzian peak/dip and also handle noisy data by easily customisable parameters.
 
