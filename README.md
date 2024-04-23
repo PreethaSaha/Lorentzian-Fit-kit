@@ -18,7 +18,7 @@ To use this code, follow these steps:
 
 1. Clone the repository
 
-   'git clone https://github.com/PreethaSaha/Lorentzian-Fit-kit.git'
+   '''git clone https://github.com/PreethaSaha/Lorentzian-Fit-kit.git'
 
 3. Navigate to the project directory
 
