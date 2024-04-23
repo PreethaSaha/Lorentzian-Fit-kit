@@ -20,11 +20,10 @@ To use this code, follow these steps:
 
  <div>
   <button class="copy-button" onclick="copyToClipboard(this.parentElement.nextElementSibling.textContent)">Copy</button>
-  <pre><code>This is a black box display for text in a README.md file.
-  You can use it to highlight important information or commands.
-  <`git clone https://github.com/PreethaSaha/Lorentzian-Fit-kit.git`></pre>
+  <pre><code>git clone https://github.com/PreethaSaha/Lorentzian-Fit-kit.git
+  </code></pre>
 </div>
-
+git clone https://github.com/PreethaSaha/Lorentzian-Fit-kit.git
 3. Navigate to the project directory
 
    cd Lorentzian-Fit-kit
