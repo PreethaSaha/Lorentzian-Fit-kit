@@ -35,6 +35,8 @@ Currently the types of baseline include and the respective codes are linked belo
 1. [Constant](https://github.com/PreethaSaha/Lorentzian-Fit-kit/blob/main/LorentzFit.py) 
 2. [Cubic](https://github.com/PreethaSaha/Lorentzian-Fit-kit/blob/main/LorentzFit_cubic.py)
 
+The above codes are designed to find a true Loretzian peak/dip and also handle noisy data by easily customisable parameters.
+
 ## Input Data Format:
 
 The input data should contain two columns of equal length: one for the independent variable X (e.g., wavelength, frequency) and another for the corresponding dependent variable Y (e.g., intensity, amplitude). 
