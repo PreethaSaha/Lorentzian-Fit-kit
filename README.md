@@ -5,6 +5,10 @@
 This repository contains code for fitting Lorentzian curves with different types of baseline function. 
 The Lorentzian curve is a common model used in numerous scientific domains to characterize spectral lines, resonances, and other phenomena exhibiting a distinctive peak shape. The inclusion of various baseline functions enables users to account for and model the underlying background signal inherent in experimental data, which may vary due to factors such as noise, drift or systematic effects.
 
+The Lorentzian function $L(x)$ is defined as
+
+$L(x)=\frac{\gamma/(2*\pi)}{(x-x_0)^2+(\gamma/2)^2}$
+
  
 
 ## Installation:
