@@ -7,7 +7,7 @@ The Lorentzian curve is a common model used in numerous scientific domains to ch
 
 The Lorentzian function $L(x)$ is defined as
 
-$L(x) = k*\frac{(\Gamma/2)^2}{(x-x_0)^2+(\Gamma/2)^2}$
+$L(x) = k\frac{(\Gamma/2)^2}{(x-x_0)^2+(\Gamma/2)^2}$
 
 where $k$ is the amplitude, $x_0$ is the center and $\Gamma$ is the full-width at half-maxima (FWHM).
 
