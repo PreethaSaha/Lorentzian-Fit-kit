@@ -76,7 +76,7 @@ The script prints the parameters of the fitted Lorentzian curve: $k$, $x_0$, $\G
 
 ![alt text](?raw=true)
 
-<img src = "https://github.com/PreethaSaha/Lorentzian-Fit-kit/blob/main/test.png" width = "50">
+<img src = "https://github.com/PreethaSaha/Lorentzian-Fit-kit/blob/main/test.png" width = "50%">
 
 
 ## License:
