@@ -71,7 +71,7 @@ def Bounds(X):
 
 ############ initial_params: function which finds the true maxima or minima using moving_average and differentiating the original data. Subsequently, it fits a cubic poly to the baseline which are then passed as the informed initial guess for Lorentzian fit with cubic baseline. #########################
 
-def initial_params(X: np.array, Y: np.array) -> List[float]:
+def initial_params(X: np.array, Y: np.array,n_moving) -> List[float]:
 
     print("---------Data Metrics------------")
     print(f"Your input X,Y data : {type(X)}, {type(Y)}")
@@ -88,7 +88,7 @@ def initial_params(X: np.array, Y: np.array) -> List[float]:
     print(f"Standard deviation of data = {sigma} \t considering the first 1/10th of the data, supposedly with no peak or dip.\n")
     
     '''User can modify this depending on how noisy the data is and the degree to smoothen it'''
-    n_moving = 20
+    #n_moving = 20
     print(f"No. of datapoints used for smoothening = {n_moving} \t #Users can modify this number according to their need! This smoothening does not affect the final fit procedure.\n")
     foo = np.diff(moving_average(n_moving,Y))
     
@@ -170,7 +170,7 @@ def fit_lorentzian_cubic(
     Y: np.ndarray,
     p0: List[float],
     plot: bool = True,
-    plot_path: Optional[Path] = None,
+    plot_path: Optional[Path] = None,n_moving=10
 ) -> Tuple[np.ndarray, np.ndarray, float]:
     
     
@@ -184,8 +184,8 @@ def fit_lorentzian_cubic(
     try:
         for temp_var in range(5):
             #print(temp_var,p0)
-            popt = curve_fit(f=cubic_lorentzian, xdata=X, ydata=Y, p0=p0,maxfev = 10000)[0] # cubic_lorentzian defined in fitFunctions.py, called here as fit
-            pcov = curve_fit(f=cubic_lorentzian, xdata=X, ydata=Y, p0=p0,maxfev = 10000)[1] # cubic_lorentzian defined in fitFunctions.py, called here as fit
+            popt,pcov = curve_fit(f=cubic_lorentzian, xdata=X, ydata=Y, p0=p0,maxfev = 10000) # cubic_lorentzian defined in fitFunctions.py, called here as fit
+            
             #print("check popt",popt)
             p0=popt
             
