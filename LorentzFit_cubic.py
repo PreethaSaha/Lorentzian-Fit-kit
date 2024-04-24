@@ -9,7 +9,7 @@
 
 #For example:
 # from LorentzFit import cubic_lorentzian, initial_params, fit_lorentzian_cubic
-# Yfit, params, covar, perr, r2 = fit_lorentzian(X, Y,  p0=p0, plot=False, plot_path=None)
+# Yfit, params, covar, perr, r2 = fit_lorentzian(X, Y, plot=False, plot_path=None)
 
 # If plot=True, plot_path=user_defined_path, it will plot the data and its fit and save with the name 'test.png' in the given path.
 
@@ -95,7 +95,7 @@ def initial_params(X: np.array, Y: np.array,n_moving) -> List[float]:
     #-----Plot or save to see/compare the smoothened & differentiated data----------------#
     plt.plot(X[:-n_moving-1],np.diff(moving_average(n_moving,Y)))
     plt.plot(X[:-n_moving-1],Y[:-n_moving-1]) # Original data
-    plt.show()
+    #plt.show()
     #plt.savefig("random.png",dpi=300)
     
     #-------Zero-crossing index --------------------------------------------#
@@ -168,13 +168,12 @@ def initial_params(X: np.array, Y: np.array,n_moving) -> List[float]:
 def fit_lorentzian_cubic(
     X: np.ndarray,
     Y: np.ndarray,
-    p0: List[float],
     plot: bool = True,
     plot_path: Optional[Path] = None,n_moving=10
 ) -> Tuple[np.ndarray, np.ndarray, float]:
     
     
-    p0=initial_params(X,Y)
+    p0=initial_params(X,Y,n_moving)
     bounds=Bounds(X)
     print(f"Bounds[min], Bounds[max] = {Bounds(X)}\n")
     
