@@ -74,7 +74,7 @@ Note that the code assumes an input data consisting of a minimum 20 (X,Y) datapo
 
 The script prints the parameters of the fitted Lorentzian curve: $k$, $x_0$, $\Gamma$ and the respective parameters of the fitted baseline. Optionally, it generates a plot showing the original data points along with the fitted Lorentzian curve and the selected baseline, in an user-defined path and an output file name 'test.png'.
 
-![alt text](https://github.com/PreethaSaha/Lorentzian-Fit-kit/test.png)
+![alt text](https://github.com/PreethaSaha/Lorentzian-Fit-kit/blob/main/test.png?raw=true)
 
 
 ## License:
