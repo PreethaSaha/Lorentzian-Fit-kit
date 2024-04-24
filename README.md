@@ -63,36 +63,6 @@ from LorentzFit_cubic import cubic_lorentzian, initial_params, fit_lorentzian_cu
 Yfit, params, covar, perr, r2 = fit_lorentzian_cubic(wavelength, intensity, plot=True, plot_path=None)
 ```
 
-```
----------Data Metrics------------
-Your input X,Y data : <class 'numpy.ndarray'>, <class 'numpy.ndarray'>
-Total no. of X,Y datapoints: 250, 250
-No. of datapoints in first 1/10th of data = 25
-Standard deviation of data = 0.16640427151687562 	 considering the first 1/10th of the data, supposedly with no peak or dip.
-
-No. of datapoints used for smoothening = 10 	 #Users can modify this number according to their need! This smoothening does not affect the final fit procedure.
-
-Value of X = 14.184738955823294 	 at zero-crossing index = 67
-Value of Y = 1.2261337636095613 	 at zero-crossing index = 67
-
-Found a dip!!
-
-Initial params [k0, gamma0, x00, a0, b0, c0, d0]:  [0.21212039406917071, 2.164658634538153, 14.184738955823294, -1.8662518305369105e-05, 0.0027543089854331257, -0.016160172446802554, 1.3412823769712963]
-Bounds[min], Bounds[max] = ([-inf, -24.5, 1.0, -inf, -inf, -inf, -inf], [inf, 24.5, 50.0, inf, inf, inf, inf])
-
-1sigma-err= [1.03629152e-01 9.08462191e-02 2.89567591e-02 4.53900487e-06
- 1.54059016e-04 1.27617690e-03 2.05140555e-02]
-k_fit or fit value of amplitude: -1.820282341538805
-gamma_fit or fit value of gamma: 1.0176288925150385
-x0_fit or fit value of resonance: 15.182843697708726
-a_fit or fit value of cubic bkgd: 1.578617047797091e-06
-b_fit or fit value of cubic bkgd: 0.0019507837595691625
-c_fit or fit value of cubic bkgd: -0.011186826924691739
-d_fit or fit value of background level: 1.4569093814119933
-r2: 0.952
-Done plotting Lorentzian fit with data!
-Done saving the plot!
-```
 
 ## Input Data Format:
 
