@@ -50,7 +50,7 @@ Currently the types of baseline include and the respective codes are linked belo
 2. [Cubic: LorentzFit_cubic.py](https://github.com/PreethaSaha/Lorentzian-Fit-kit/blob/main/LorentzFit_cubic.py)
 
 The above codes are designed to find a true Loretzian peak/dip and also handle noisy data by easily customisable parameters.
-
+```
 import csv
 import numpy as np
 
@@ -61,6 +61,7 @@ intensity=a[:,1]
 
 from LorentzFit_cubic import cubic_lorentzian, initial_params, fit_lorentzian_cubic
 Yfit, params, covar, perr, r2 = fit_lorentzian_cubic(wavelength, intensity, plot=True, plot_path=None)
+```
 
 ## Input Data Format:
 
