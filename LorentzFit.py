@@ -9,7 +9,7 @@
 
 #For example:
 # from LorentzFit import lorentzian, initial_params, fit_lorentzian
-# Yfit, params, covar, perr, r2 = fit_lorentzian(X, Y,  p0=p0, plot=False, plot_path=None)
+# Yfit, params, covar, perr, r2 = fit_lorentzian(X, Y, plot=False, plot_path=None)
 
 # If plot=True, plot_path=user_defined_path, it will plot the data and its fit and save with the name 'test.png' in the given path. 
 
@@ -75,7 +75,7 @@ def Bounds(X):
 
 ############ finds the true maxima or minima using moving_average and differentiating the spectrum. A set of initial guesses are passed for Lorentzian fit with constant baseline or background. #########################
 
-def initial_params(X: np.array, Y: np.array) -> List[float]:
+def initial_params(X: np.array, Y: np.array,n_moving) -> List[float]:
 
     print("---------Data Metrics------------")
     print(f"Your input X,Y data : {type(X)}, {type(Y)}")
@@ -92,14 +92,14 @@ def initial_params(X: np.array, Y: np.array) -> List[float]:
     print(f"Standard deviation of data = {sigma} \t considering the first 1/10th of the data, supposedly with no peak or dip.\n")
     
     '''User can modify this depending on how noisy the data is and the degree to smoothen it'''
-    n_moving = 20
+   # n_moving = 20
     print(f"No. of datapoints used for smoothening = {n_moving} \t #Users can modify this number according to their need! This smoothening does not affect the final fit procedure.\n")
     foo = np.diff(moving_average(n_moving,Y))
     
     #-----Plot or save the smoothened and differentiated data----------------#
     plt.plot(X[:-n_moving-1],np.diff(moving_average(n_moving,Y)))
     plt.plot(X[:-n_moving-1],Y[:-n_moving-1])
-    plt.show()
+   # plt.show()
     #plt.savefig("random.png",dpi=300)
     
     #-------Zero-crossing index --------------------------------------------#
@@ -165,20 +165,18 @@ def initial_params(X: np.array, Y: np.array) -> List[float]:
 def fit_lorentzian(
     X: np.ndarray,
     Y: np.ndarray,
-    p0: List[float],
     plot: bool = True,
-    plot_path: Optional[Path] = None,
+    plot_path: Optional[Path] = None,n_moving=10
 ) -> Tuple[np.ndarray, np.ndarray, float]:
     
-    p0=initial_params(X,Y)
+    p0=initial_params(X,Y,n_moving)
     bounds=Bounds(X)
     print(f"Bounds[min], Bounds[max] = {Bounds(X)}\n")
     try:
         for temp_var in range(5): # Not important----Just to check whether it returns the same fit estimates for greater iterations!!
             
             #print(temp_var,p0)
-            popt = curve_fit(f=lorentzian, xdata=X, ydata=Y, p0=p0, maxfev = 10000)[0]
-            pcov = curve_fit(f=lorentzian, xdata=X, ydata=Y, p0=p0, maxfev = 10000)[1]
+            popt,pcov = curve_fit(f=lorentzian, xdata=X, ydata=Y, p0=p0, maxfev = 10000)
             
             p0=popt # to ensure that at each iteration that estimates of the previous iteration is taken as initial guesses
             
