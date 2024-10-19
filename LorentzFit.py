@@ -17,6 +17,8 @@
 # perr : 1-sigma error of the fit estimates
 # r2   : goodness of fit
 
+
+# Install the required dependencies
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
