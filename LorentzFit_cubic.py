@@ -1,4 +1,3 @@
-####-----------Made by Preetha Saha--------------------------------####
 
 #To start: Please keep this script in the working directory!!
 # This script does a Lorentzian fit with a cubic baseline or background. It assumes that the input data are numpy arrays(float 64) having a minimum of 20 (X,Y) datapoints. If not 20 datapoints, the user should change N accordingly.
@@ -20,6 +19,9 @@
 # r2   : goodness of fit
 
 
+
+
+###########Importing the required dependencies#####################
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
